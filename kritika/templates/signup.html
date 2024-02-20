@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign up</title>
+    <link rel="stylesheet" href="{% static  'CSS/signin.css'%}">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+   
+
+  </head>
+  <body>
+      
+    <div class="s1">
+     <a href="{% url 'index'%}"> <img src="{% static  './Images/logo.svg'%}" alt="" /> </a>
+    <form action="{% url 'signup' %}" method="POST">
+      {% csrf_token %}
+      <h1>Create an account</h1>
+      <div class="signin">
+      <label for="username"> Username</label>
+      <input type="text" placeholder="Username" name="username" id="username" required><i class="fa-regular fa-user"></i>
+      <div class="signin">
+      <label for="email"> Email </label>
+      <br />
+      <input type="email" placeholder="Email" name="email" id="email" required><i class="fa-regular fa-envelope"></i>
+      </div>
+      <div class="signin">
+        <label for="number"> Enter your contact number </label>
+        <br />
+        <input type="number" placeholder="Number" name="number" id="number" required><i class="fa-regular fa-envelope"></i>
+        </div>
+      <div class="signin">
+        <label for="pass">Password</label>
+        <br />
+        <input type="password" placeholder="Password" id="pass" name="pass"><i class="fa-regular fa-eye-slash eye eyetwo"></i>
+    </div>
+    <div class="signin">
+      <label for="confirm_password">Confirm Password</label>
+        <br />
+        <input type="password" placeholder="Confirm Password" id="confirm_password" name="confirm_password"><i class="fa-regular fa-eye-slash eye eyeone"></i>
+<div class="button1">
+      <button type="submit" class="login">Create account</button> <br />
+      <!-- <div class="sign">
+      <button class="continue">Continue with Google</button><i class="fa-brands fa-google"></i>  
+</div> -->
+<p>Already have an account? <span><a href="{% url 'login'%}">Login</a></span></p>
+    </div>
+    </form>
+  </div>
+    <script src="{% static 'js/script.js'%}"></script>
+  </body>
+</html>

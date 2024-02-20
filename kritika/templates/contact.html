@@ -1,0 +1,125 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="{% static  './CSS/contact.css'%}">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+   
+
+  </head>
+  <body>
+
+    <section class="contact">
+      <div class="content">
+        <h2>Contact us for more details</h2>
+      </div>
+      <div class="container">
+        <div class="contactInfo">
+          <div class="box">
+            <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="text">
+              <h3>Address</h3>
+              <p>Kathmandu <br>Shakhnamul</p>
+             </div>
+          </div>
+        <div class="box">
+          <div class="icon"><i class="fa-regular fa-envelope"></i></div>
+          <div class="text">
+            <h3>Email</h3>
+            <p>parkXpress@gmail.com<br></p>
+           </div>
+        </div>
+      <div class="box">
+        <div class="icon"><i class="fa-solid fa-phone"></i></div>
+        <div class="text">
+          <h3>Phone number</h3>
+          <p>9878273289</p>
+         </div>
+      </div>
+  </div>
+    <div class="contactForm">
+      <a href="{% url 'index'%}"> <img src="{% static  './Images/logo.svg'%}" alt="" /></a>
+      <form>
+        <h2>Send Message</h2>
+        <div class="inputBox">
+          <input type="text" name="" required="required">
+          <span>Full Name</span>
+        </div>
+        <div class="inputBox">
+          <input type="text" name="" required="required">
+          <span>Email</span>
+        </div>
+        <div class="inputBox">
+          <textarea required="required"></textarea>
+          <span>Type your message</span>
+        </div>
+        <div class="inputBox">
+          <input type="submit" name="" class="send-btn" value="Send">
+        </div>
+      </form>
+ 
+      </div>
+      </div>
+    </section>
+    <!-- <div class="s1" >
+      <div class="s1img">
+     <a href="main.html"> <img src="{% static  './Images/logo.svg'%}" alt="" /> </a>
+     <h1>Contact us for more details</h1>
+        <p>If ypu have any questions or need further information about our services,please feel free to get in touch with us.We're here to help!</p>
+    </div>
+      <form>
+        
+        
+        <div class="email-login">
+        <label for="name"> Your name </label>
+        <br />
+        <input type="name"placeholder="Enter your username" /> 
+      </div>
+
+      <div class="email-login">
+        <label for="email">Your email</label>
+        <br />
+        <input type="email" placeholder="Enter your email"/>
+        <i class="fa-regular fa-envelope"></i>
+      </div>
+        <div class="email-login">
+            <br />
+            <div class="message">
+                <label for="email">Your message</label>
+            <input type="test">
+          </div>
+        </div>
+
+  <div class="button2">
+        <button class="submit">Submit</button></a>  <br />
+    
+      </div>
+      </div>
+      </form> -->
+  </body>
+</html>
+
+<!-- </head>
+<body>
+    <div class="contactsection">
+        <h1>Contact us for more details</h1>
+        <p>If ypu have any questions or need further information about our services,please feel free to get in touch with us.We're here to help!</p>
+        <div class="contact-form">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="Enter your name">
+
+            <label for="email">Your Email</label>
+            <input type="email" id="email" placeholder="Enter your email">
+
+            <label for="message">Your Message:</label>
+            <input type="text" id="name" placeholder="Enter your name">
+
+            <button type="Submit">Send message</button>
+        </div>
+    </div>
+    
+</body>
+</html> -->

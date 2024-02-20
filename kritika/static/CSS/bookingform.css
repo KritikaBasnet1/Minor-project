@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  img {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 40px;
+  }
+  
+  form {
+    width: 40%;
+    margin: 100px auto;
+    border: 2px solid rgb(248, 230, 230);
+    padding: 40px;
+  }
+  form .name {
+    display: flex;
+    gap: 30px;
+  }
+  
+  input {
+    margin-top: 10px;
+    outline: none;
+    padding: 4px 10px;
+    width: 100%;
+  }
+  
+  label {
+    display: inline-block;
+    margin-top: 10px;
+  }
+  
+  .bookNow{
+    width: 100%;
+   background: #DB6A63;
+  color: white;
+    display: block;
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+  }

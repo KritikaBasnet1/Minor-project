@@ -1,0 +1,349 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+    <link rel="stylesheet" href="{% static  './CSS/newSpot.css'%}">
+</head>
+<body>
+    <section class="spot" id="spot">
+        <h1>Find your spot</h1>
+        <div class="spot-header">
+          <div class="available">
+            <div class="available-img">
+              <img src="{% static  './Images/Group7.png'%}"  alt="available-img">
+            </div>
+            <h3>Available</h3>
+          </div>
+          <div class="occupied">
+            <div class="occupied-img">
+              <img
+              img src="{% static  './Images/Group7.png'%}"
+                alt="occupied-img"
+              />
+            </div>
+            <h3>Occupied</h3>
+          </div>
+          <div class="booked">
+            <div class="booked-img">
+              <img
+              img src="{% static  './Images/Group7.png'%}"
+                alt="booked-img"
+              />
+            </div>
+            <h3>Booked</h3>
+          </div>
+        </div>
+      
+        <div class="spot-grid">
+          <a href="{% url 'bookingForm'%}">
+            <div class="box spot-available">
+              <img src="{% static  './Images/Group7.png'%}" />
+              <h4>slot 1</h4>
+            </div>
+          </a>
+          <a href="{% url 'bookingForm'%}">
+            <div class="box spot-available">
+              <img src="{% static  './Images/Group7.png'%}" />
+              <h4>slot 2</h4>
+            </div>
+          </a>
+          <a href="{% url 'bookingForm'%}">
+            <div class="box spot-available">
+              <img src="{% static  './Images/Group7.png'%}" />
+              <h4>slot 3</h4>
+            </div>
+          </a>
+          <a href="{% url 'bookingForm'%}">
+            <div class="box spot-available">
+              <img src="{% static  './Images/Group7.png'%}" />
+              <h4>slot 4</h4>
+            </div>
+          </a>
+          <div class="box spot-booked">
+            <img src="{% static  './Images/Group7.png'%}" />
+            <h4>slot 5</h4>
+          </div>
+          <div class="box spot-occupied">
+            <img src="{% static  './Images/Group7.png'%}" />
+            <h4>slot 6</h4>
+          </div>
+          <a href="{% url 'bookingForm'%}">
+            <div class="box spot-available">
+              <img src="{% static  './Images/Group7.png'%}" />
+              <h4>slot 7</h4>
+            </div>
+          </a>
+          <div class="box spot-occupied">
+            <img src="{% static  './Images/Group7.png'%}" />
+            <h4>slot 8</h4>
+          </div>
+          <a href="{% url 'bookingForm'%}">
+            <div class="box spot-available">
+              <img src="{% static  './Images/Group7.png'%}" />
+              <h4>slot 9</h4>
+            </div>
+          </a>
+          <div class="box spot-occupied">
+            <img src="{% static  './Images/Group7.png'%}" />
+            <h4>slot 11</h4>
+          </div>
+          <a href="{% url 'bookingForm'%}">
+            <div class="box spot-available">
+              <img src="{% static  './Images/Group7.png'%}" />
+              <h4>slot 12</h4>
+            </div>
+          </a>
+          <div class="box spot-booked">
+            <img src="{% static  './Images/Group7.png'%}" />
+            <h4>slot 13</h4>
+          </div>
+          <a href="{% url 'bookingForm'%}">
+            <div class="box spot-available">
+              <img src="{% static  './Images/Group7.png'%}" />
+              <h4>slot 14</h4>
+            </div>
+          </a>
+          <a href="{% url 'bookingForm'%}">
+            <div class="box spot-available">
+              <img src="{% static  './Images/Group7.png'%}" />
+              <h4>slot 15</h4>
+            </div>
+          </a>
+          <a href="{% url 'bookingForm'%}">
+            <div class="box spot-available">
+              <img src="{% static  './Images/Group7.png'%}" />
+              <h4>slot 16</h4>
+            </div>
+          </a>
+          <div class="box spot-booked">
+            <img src="{% static  './Images/Group7.png'%}" />
+            <h4>slot 17</h4>
+          </div>
+          <div class="box spot-booked">
+            <img src="{% static  './Images/Group7.png'%}" />
+            <h4>slot 18</h4>
+          </div>
+          <div class="box spot-booked">
+            <img src="{% static  './Images/Group7.png'%}" />
+            <h4>slot 19</h4>
+          </div>
+          <div class="box spot-occupied">
+            <img src="{% static  './Images/Group7.png'%}" />
+            <h4>slot 20</h4>
+          </div>
+          <div class="box spot-occupied">
+            <img src="{% static  './Images/Group7.png'%}" />
+            <h4>slot 21</h4>
+          </div>
+          <a href="{% url 'bookingForm'%}">
+            <div class="box spot-available">
+              <img src="{% static  './Images/Group7.png'%}" />
+              <h4>slot 22</h4>
+            </div>
+          </a>
+          <div class="box spot-booked">
+            <img src="{% static  './Images/Group7.png'%}" />
+            <h4>slot 23</h4>
+          </div>
+          <a href="{% url 'bookingForm'%}">
+            <div class="box spot-available">
+              <img src="{% static  './Images/Group7.png'%}" />
+              <h4>slot 24</h4>
+            </div>
+          </a>
+          <a href="{% url 'bookingForm'%}">
+            <div class="box spot-available">
+              <img src="{% static  './Images/Group7.png'%}" />
+              <h4>slot 25</h4>
+            </div>
+          </a>
+          <a href="{% url 'bookingForm'%}">
+            <div class="box spot-available">
+              <img src="{% static  './Images/Group7.png'%}" />
+              <h4>slot 26</h4>
+            </div>
+          </a>
+          <a href="{% url 'bookingForm'%}">
+            <div class="box spot-available">
+              <img src="{% static  './Images/Group7.png'%}" />
+              <h4>slot 27</h4>
+            </div>
+          </a>
+          <div class="box spot-booked">
+            <img src="{% static  './Images/Group7.png'%}" />
+            <h4>slot 28</h4>
+          </div>
+          <div class="box spot-occupied">
+            <img src="{% static  './Images/Group7.png'%}" />
+            <h4>slot 29</h4>
+          </div>
+          <a href="{% url 'bookingForm'%}l">
+            <div class="box spot-available">
+              <img src="{% static  './Images/Group7.png'%}" />
+              <h4>slot 30</h4>
+            </div>
+          </a>
+          <a href="{% url 'bookingForm'%}">
+            <div class="box spot-available">
+              <img src="{% static  './Images/Group7.png'%}" />
+              <h4>slot 31</h4>
+            </div>
+          </a>
+          <a href="{% url 'bookingForm'%}">
+            <div class="box spot-available">
+              <img src="{% static  './Images/Group7.png'%}" />
+              <h4>slot 32</h4>
+            </div>
+          </a>
+      
+          <a href="{% url 'bookingForm'%}">
+            <div class="box spot-available">
+              <img src="{% static  './Images/Group7.png'%}" />
+              <h4>slot 33</h4>
+            </div>
+          </a>
+          <a href="{% url 'bookingForm'%}">
+            <div class="box spot-available">
+              <img src="{% static  './Images/Group7.png'%}" />
+              <h4>slot 34</h4>
+            </div>
+          </a>
+          <div class="box spot-occupied">
+            <img src="{% static  './Images/Group7.png'%}" />
+            <h4>slot 21</h4>
+          </div>
+          <div class="box spot-occupied">
+            <img src="{% static  './Images/Group7.png'%}" />
+            <h4>slot 21</h4>
+          </div>
+          <div class="box spot-occupied">
+            <img src="{% static  './Images/Group7.png'%}" />
+            <h4>slot 21</h4>
+          </div>
+          <div class="box spot-occupied">
+            <img src="{% static  './Images/Group7.png'%}" />
+            <h4>slot 21</h4>
+          </div>
+          <div class="box spot-occupied">
+            <img src="{% static  './Images/Group7.png'%}" />
+            <h4>slot 21</h4>
+          </div>
+          <div class="box spot-booked">
+            <img src="{% static  './Images/Group7.png'%}" />
+            <h4>slot 19</h4>
+          </div>
+          <div class="box spot-booked">
+            <img src="{% static  './Images/Group7.png'%}" />
+            <h4>slot 19</h4>
+          </div>
+          <div class="box spot-booked">
+            <img src="{% static  './Images/Group7.png'%}" />
+            <h4>slot 19</h4>
+          </div>
+          <div class="box spot-booked">
+            <img src="{% static  './Images/Group7.png'%}" />
+            <h4>slot 19</h4>
+          </div>
+          <a href="{% url 'bookingForm'%}">
+            <div class="box spot-available">
+              <img src="{% static  './Images/Group7.png'%}" />
+              <h4>slot 32</h4>
+            </div>
+          </a>
+          <a href="{% url 'bookingForm'%}">
+            <div class="box spot-available">
+              <img src="{% static  './Images/Group7.png'%}" />
+              <h4>slot 32</h4>
+            </div>
+          </a>
+          <a href="{% url 'bookingForm'%}">
+            <div class="box spot-available">
+              <img src="{% static  './Images/Group7.png'%}" />
+              <h4>slot 32</h4>
+            </div>
+          </a>
+          <a href="{% url 'bookingForm'%}">
+            <div class="box spot-available">
+              <img src="{% static  './Images/Group7.png'%}" />
+              <h4>slot 32</h4>
+            </div>
+          </a>
+          <a href="{% url 'bookingForm'%}">
+            <div class="box spot-available">
+              <img src="{% static  './Images/Group7.png'%}" />
+              <h4>slot 32</h4>
+            </div>
+          </a>
+          
+          <a href="{% url 'bookingForm'%}">
+            <div class="box spot-available">
+              <img src="{% static  './Images/Group7.png'%}" />
+              <h4>slot 32</h4>
+            </div>
+          </a>
+      
+          <div class="box spot-booked">
+            <img src="{% static  './Images/Group7.png'%}" />
+            <h4>slot 13</h4>
+          </div>
+          <div class="box spot-booked">
+            <img src="{% static  './Images/Group7.png'%}" />
+            <h4>slot 13</h4>
+          </div>
+      
+          <div class="box spot-booked">
+            <img src="{% static  './Images/Group7.png'%}" />
+            <h4>slot 13</h4>
+          </div>
+          <div class="box spot-booked">
+            <img src="{% static  './Images/Group7.png'%}" />
+            <h4>slot 13</h4>
+          </div>
+          <div class="box spot-booked">
+            <img src="{% static  './Images/Group7.png'%}" />
+            <h4>slot 13</h4>
+          </div>
+          <div class="box spot-booked">
+            <img src="{% static  './Images/Group7.png'%}" />
+            <h4>slot 13</h4>
+          </div>
+        </div>
+        <div class="booked-model-wrapper">
+          <div class="booked-model">
+            <i class="fa-solid fa-x"></i>
+            <h1>Booked</h1>
+          </div>
+          
+        </div>
+        <!-- <div class="login-model-wrapper">
+          <div class="login-model">
+            <h1>Login to get access</h1>
+            <i class="fa-solid fa-x"></i>
+            <a href="./bookingForm.html">
+              <button>Login</button>
+            </a>
+          </div>
+          </div> -->
+      
+          <div class="booked-model-wrapper">
+          <div class="booked-model">
+            <i class="fa-solid fa-x"></i>
+            <h1>Booked</h1>
+          </div>
+          
+        </div>
+        <div class="occupied-model-wrapper">
+          <div class="occupied-model">
+            <i class="fa-solid fa-x"></i>
+            <h1>Occupied</h1>
+          </div>
+        </div>
+      </section>
+      <script src="{%static 'js/new.js'%}"></script>
+</body>
+</html>

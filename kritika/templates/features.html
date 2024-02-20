@@ -1,0 +1,152 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- boxicons Css -->
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="{% static  'CSS/features.css'%}" />
+    <link rel="stylesheet" href="{% static  'CSS/style.css'%}" />
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  </head>
+  <body>
+ <!-- header -->
+
+ <div class="nav-wrapper">
+  <div class="navbar">
+    <img src="{% static  './Images/logo.svg'%}" alt="" />
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="features.html">Features</a></li>
+      <li><a href="#booking">Bookings</a></li>
+      <li><a href="whytochoose.html">Why choose us?</a></li>
+    </ul>
+
+    <div class="nav-btn">
+      <a href="login.html"> <button class="login">Login <i class="fa-solid fa-arrow-right-to-bracket" ></i>  </button></a>
+      <a href="signup.html"> <button class="Signup">Sign up <i class="fa-regular fa-pen-to-square"></i></button></a>
+    </div>
+  </div>
+</div>
+<!-- header-end -->
+
+    <div class="features">
+      <div class="F1">
+        <img src="{% static  './Images/f1.svg'%}" alt=" " />
+        <h1>Reduce traffic flow</h1>
+        <p>
+        Reserve your parking spot in advance with confidence, knowing that our sensor data
+          ensures a guaranteed space for you.
+        </p>
+      </div>
+
+      <div class="F1">
+        <img src="{% static  './Images/f2.svg'%}" alt=" " />
+        <h1>User behavior</h1>
+        <p>
+          This website tracks the user behavior and patterns where they
+          can get information about vacant areas.
+        </p>
+      </div>
+      <div class="F1">
+        <img src="{% static  './Images/f3.svg'%}" alt=" " />
+        <h1>Reservation of spot</h1>
+        <p>
+          This website will allow the user to reserve the spot they
+          acquire the coming day in advance.
+        </p>
+      </div>
+      <div class="F1">
+        <img src="{% static  './Images/f4.svg'%}" alt=" " />
+        <h1>Increased efficiency</h1>
+        <p>
+          Since the spot is already reserved drivers can save their time
+          of cruising. Moreover, the spaces and lands will be allocated
+          thoroughly.
+        </p>
+      </div>
+      <div class="F1">
+        <img src="{% static  './Images/f5.svg'%}" alt=" " />
+        <h1>Advanced technology</h1>
+        <p>
+          Parking management systems are known for their integration 
+          with technology. The website includes customization facilities 
+          according to the user preference.
+        </p>
+      </div>
+      <div class="F1">
+        <img src="{% static  './Images/f6.svg'%}" alt=" " />
+        <h1>Secure payment</h1>
+        <p>
+          Users will have monthly or yearly subscription
+          packages with additional benefit.
+        </p>
+      </div>
+    </div>
+
+
+    <footer>
+      <div class="footer-content">
+          <div class="row">
+              <div class="footer-col">
+                <img src="{% static  './Images/logo.svg'%}">
+                  <p>We are dedicated to make
+cities more livable and reducing
+environmental footprint 
+associated with parking.</p>
+              </div> 
+              <div class="footer-col">
+                  <h4>Company</h4>
+                  <ul>
+                      <li><a href="main.html">Home</a></li>
+                      <li><a href="#about">About us</a></li>
+                      <li><a href="#spot">Find spot</a></li>
+                      <li><a href="features.html">Features</a></li>
+                      <li><a href="">Bookings</a></li>
+                      <li><a href="">Testimonial</a></li>
+                  </ul>
+              </div> 
+              <div class="footer-col">
+                  <h4>Support</h4>
+                  <ul>
+                      <li><a href="">Help center</a></li>
+                      <li><a href="">Terms of service</a></li>
+                      <li><a href="">Legal</a></li>
+                       <li><a href="">Privacy policy</a></li>
+                        <li><a href="">Status</a></li>
+                         <li><a href="">Contact us</a></li>
+                      
+                  </ul>-
+              </div> 
+              <div class="footer-col">
+                  <h4>Stay up to date</h4>
+                  <input type="email" placeholder="Enter your email" class="inputEmail">
+                  <div class="icons">
+                    <a href="#"><i class="bx bxl-facebook-circle" style="color: #0356f0;"></i></a>
+                    <a href="#"><i class="bx bxl-instagram-alt" style="color: #0356f0;"></i></a>
+                    <a href="#"><i class="bx bxl-twitter" style="color: #0356f0;"></i></a>
+                    <a href="#"><i class="bx bxl-youtube"style="color: #0356f0;"></i></a>
+                  </div>
+              </div>
+          </div>
+          <hr>
+          <div class="row">
+                  <p>Copyright@2023parkXpress@ltd</p>
+              <div class="social">
+                <ul>
+                   <li><i class="fas fa-map-marker-alt" style="color: #0356f0;"></i> Kathmandu,Nepal</li>
+                  <li> <i class="far fa-envelope" style="color: #0356f0;"></i>  parkXpress@gmail.com</li>
+                <li>  <i class="fas fa-phone-alt" style="color: #0356f0;"></i> 923823929892</li>
+                </ul>
+              </div>
+          </div>
+      </div>
+  </footer>
+
+     </body>
+</html>

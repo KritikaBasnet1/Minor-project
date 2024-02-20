@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static  './CSS/bookingform.css'%}">
+</head>
+<body>
+    <form>
+        <div clas="bookingform">
+        <img src="{% static  './Images/logo.svg'%}"></br>
+        <input type="text" placeholder="Enter your full name" /> </br>
+        <input type=" time" placeholder="Start Time" /></br>
+        <input type="time" placeholder="End Time" /></br>
+        <input type="date" placeholder="Date" /></br>
+        <input type="number" placeholder="Vehicle number." />
+        <input type="number" placeholder="Contact number." />
+        <a href="{% url 'payment'%}" class="bookNow">
+          Book now
+        </a>
+    </div>
+    </form>
+</body>
+</html>

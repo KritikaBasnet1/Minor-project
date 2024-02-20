@@ -1,0 +1,43 @@
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      .payways img {
+        position: relative;
+        right:-70px;
+        transform: translateX(-50%);
+        
+      }
+      
+     .main {
+        width:30%;
+        margin: 100px auto;
+        border: 2px solid rgb(248, 230, 230);
+        padding-bottom: 30px;
+       
+      }
+     
+     header {
+        background: #FB5656;
+        width:100%;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+     }
+header h1{
+    color: #FBF7F7;
+font-size: 18px;
+font-weight: 400;
+text-align: center;
+
+}
+.payways h2{
+color: #000;
+font-size: 18px;
+font-weight: 400;
+padding: 20px;
+
+ }
+      

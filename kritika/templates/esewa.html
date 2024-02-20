@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static  './CSS/esewa.css'%}">
+</head>
+<body>
+    <div class="contain">
+    <form>
+       <img src="{% static  'Images/esewa-icon-large 2.png'%}" alt="">
+        <div class="esewa-acc">
+        <label for=" account"> From Account </label>
+        <br />
+        <input type="number"placeholder="Enter your account number" /> 
+    </div>
+
+    <div class="esewa-acc">
+        <label for=" amount"> Amount </label>
+        <br />
+        <input type="number" /> 
+    </div>
+<div class="main-grid">
+    <div class="grid">
+    <h1>10</h1>
+    </div>
+        <div class="grid">
+            <h1>50</h1>
+            </div>
+            <div class="grid">
+                <h1>100</h1>
+                </div>
+                <div class="grid">
+                    <h1>200</h1>
+                    </div>
+                    <div class="grid">
+                        <h1>500</h1>
+                        </div>
+                        
+</div>    
+<div class="esewa-acc">
+    <label for=" id">eSewa ID </label>
+    <br />
+    <input type="number" /> 
+</div>
+<div class="esewa-acc">
+    <label for=" purpose"> Purpose </label>
+    <br />
+    <input type="text" /> 
+</div>                                     
+    
+ <div class="button2">
+        <button class="proceed">Proceed</button></a>  <br />
+        <p>Cancel</p>
+      </div>
+      </div>
+      </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+{% load static %}
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static  'CSS/style.css'%}">
+    <!-- boxicons Css -->
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+
+
+<!-- Demo styles -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,200&display=swap" rel="stylesheet">
+ </head>
+ <body>
+ <!-- testimonial -->
+ 
+<!-- header-end -->
+ <!-- <div class="c3img">
+  <a href="main.html"> <img src="./Images/logo.svg" alt="" /> </a>
+ </div> -->
+ <div class="clients">
+    <div class="client-left">
+      <a href="{% url 'index'%}"> <img src="{% static  './Images/logo.svg'%}" alt="" /> </a>
+      <h1>From our <span class="C3">Clients</span></h1>
+      <p>
+        Why they prefer parkXpress<br />   
+        from other websites?
+      </p> 
+      
+    </div>
+
+    <div class="client-right">
+      <img src="{% static  'f1.png'%}" alt="" />
+      <h1>George, Noah</h1>
+      <h2>Cybersecurity analyst</h2>
+      <p>
+        "I can't express how much the parkXpress has
+        simplified my life! Finding parking used to be such a
+        hassle, but this app has truly changed the
+        game. The user-friendly interface, real-time availability updates,
+        and seamless payment options make parking a
+        breeze. I've saved both time and money since I started
+        using this app. I highly recommend it to anyone looking
+        for stress-free parking solutions."
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>
+
+

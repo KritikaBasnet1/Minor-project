@@ -1,0 +1,572 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+       <!-- css -->
+      <link rel="stylesheet" href="{% static  './CSS/testimonial.css'%}">
+      <link rel="stylesheet" href="{% static  './CSS/choose.css'%}">
+
+      <!-- boxicons Css -->
+     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel='stylesheet'>
+     <link rel="stylesheet" href="{% static  './CSS/style.css'%}" />
+     <link rel="stylesheet" href="{% static  './CSS/newSpot.css'%}" />
+     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+     <!-- Link Swiper's CSS -->
+     <link rel="stylesheet" href=" https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+
+     <!-- Demo styles -->
+
+    <link rel="stylesheet" href="{% static  './CSS/style.css'%}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,200&display=swap" rel="stylesheet">
+  
+
+
+</head>
+  <body>
+    <!-- header -->
+
+      <div class="nav-wrapper">
+        <div class="navbar">
+          <img src="{% static  './Images/logo.svg'%}" alt="" />
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="{% url 'features'%}">Features</a></li>
+            <li><a href="#Bookings">Bookings</a></li>
+            <li><a href="{% url 'whytochoose'%}">Why choose us?</a></li>
+          </ul>
+
+          <div class="nav-btn">
+            <a href="{% url 'login'%}"> <button class="login">Login <i class="fa-solid fa-arrow-right-to-bracket" ></i>  </button></a>
+            <a href="{% url 'signup'%}"> <button class="Signup">Sign up <i class="fa-regular fa-pen-to-square"></i></button></a>
+          </div>
+        </div>
+      </div>
+      <!-- header-end -->
+          <div class="container">
+      <div class="left">
+        <h1>
+          Your <span class="T2">park solution</span>
+          just a click away
+        </h1>
+        <p>
+          saving time, reducing pollution and improving the driving experience.
+        </p>
+        <div class="textbtn">
+          <a href="#Bookings"> <button class="spotfind">FInd your spot  <i class="fa-solid fa-magnifying-glass"></i>  </button></a>
+        </div>
+        <!-- <div class="text">
+          <input type="text" placeholder="Find your spot"  />
+          <i class="fa-solid fa-magnifying-glass" style="color: #F8F6F6;"></i>
+        </div> -->
+      </div>
+    </div>
+  
+
+    <!-- about -->
+    <div class="about" id="about">
+      <div class="about-left">
+        <h1>About Us</h1>
+        <p>
+          At parkXpress our mission is to transform
+          parking into a seamless and sustainable
+          experience. We are dedicated to make
+          cities more livable and reducing environmental
+          footprint associated with parking.
+        </p>
+        <a href="{% url 'client'%}"><button class="readmore">Read More <i class="fa-brands fa-readme"></i></button> </a>
+      </div>
+      <div class="about-right">
+        <img src="{% static  './Images/about.jpg'%}" alt="" />
+      </div>
+    </div>
+
+     <!-- Swiper -->
+  <div class="all-swiper-wrapper " >
+    <div class="offers">
+    <h2>What do you offer?</h2>
+    <div class="swiper swiper1">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="{% static  './Images/g1.svg'%}" alt="">
+          <h1>Sensor Technology</h1>
+          <p>For businesses,we offer in-depth analytics and reporting,powered by advanced sensor data,to optimize parking operations,improve efficiency,and reduce costs</p>
+        </div>
+  
+        <div class="swiper-slide">     
+          <img src="{% static  './Images/g2.svg'%}" alt="">
+          <h1>Security
+          System</h1>
+          <p>Never waste another minute searching for a parking space. Our state-of-the-art guidance system directs you to available parking spots in real-time.</p>
+        </div>
+        <div class="swiper-slide">
+          <img src="{% static  './Images/g3.svg'%}" alt="">
+          <h1>Reservation System</h1>
+          <p>Planning a trip or a night out?Reserve your parking spot in advance with confidence,knowing that our sensor data ensures a guaranteed space for you.</p>
+        </div>
+        <div class="swiper-slide">
+          <img src="{% static  './Images/g4.svg'%}" alt="">
+          <h1>Contactless payment</h1>
+          <p>Say goodbye to fumbling for coins or waiting in line at parking kiosks. Our contactless payment options make parking easy and convenient.</p>
+        </div>
+       
+      </div>
+    
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</div>
+   <!-- Swiper JS -->
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+   <!-- Initialize Swiper -->
+<script>
+  var swiper1 = new Swiper(".swiper1", 
+  {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+</script>
+
+<!-- spot -->
+<div class="book" id="Bookings">
+ <section class="spot">
+  <h1>Find your spot</h1>
+  <div class="spot-header">
+    <div class="available">
+      <div class="available-img">
+        <img src="{% static  './Images/Group7.png'%}"  alt="available-img">
+      </div>
+      <h3>Available</h3>
+    </div>
+    <div class="occupied">
+      <div class="occupied-img">
+        <img
+        img src="{% static  './Images/Group7.png'%}"
+          alt="occupied-img"
+        />
+      </div>
+      <h3>Occupied</h3>
+    </div>
+    <div class="booked">
+      <div class="booked-img">
+        <img
+        img src="{% static  './Images/Group7.png'%}"
+          alt="booked-img"
+        />
+      </div>
+      <h3>Booked</h3>
+    </div>
+  </div>
+
+  <div class="spot-grid">
+      <div class="box spot-available">
+        <img src="{% static  './Images/Group7.png'%}" />
+        <h4>slot 1</h4>
+      </div>
+      <div class="box spot-available">
+        <img src="{% static  './Images/Group7.png'%}" />
+        <h4>slot 2</h4>
+      </div>
+      <div class="box spot-available">
+        <img src="{% static  './Images/Group7.png'%}" />
+        <h4>slot 3</h4>
+      </div>
+      <div class="box spot-available">
+        <img src="{% static  './Images/Group7.png'%}" />
+        <h4>slot 4</h4>
+      </div>
+    <div class="box spot-booked">
+      <img src="{% static  './Images/Group7.png'%}" />
+      <h4>slot 5</h4>
+    </div>
+    <div class="box spot-occupied">
+      <img src="{% static  './Images/Group7.png'%}" />
+      <h4>slot 6</h4>
+    </div>
+      <div class="box spot-available">
+        <img src="{% static  './Images/Group7.png'%}" />
+        <h4>slot 7</h4>
+      </div>
+    <div class="box spot-occupied">
+      <img src="{% static  './Images/Group7.png'%}" />
+      <h4>slot 8</h4>
+    </div>
+      <div class="box spot-available">
+        <img src="{% static  './Images/Group7.png'%}" />
+        <h4>slot 9</h4>
+      </div>
+    <div class="box spot-occupied">
+      <img src="{% static  './Images/Group7.png'%}" />
+      <h4>slot 10</h4>
+    </div>
+      <div class="box spot-available">
+        <img src="{% static  './Images/Group7.png'%}" />
+        <h4>slot 11</h4>
+      </div>
+    <div class="box spot-booked">
+      <img src="{% static  './Images/Group7.png'%}" />
+      <h4>slot 12</h4>
+    </div>
+      <div class="box spot-available">
+        <img src="{% static  './Images/Group7.png'%}" />
+        <h4>slot 13</h4>
+      </div>
+      <div class="box spot-available">
+        <img src="{% static  './Images/Group7.png'%}" />
+        <h4>slot 14</h4>
+      </div>
+      <div class="box spot-available">
+        <img src="{% static  './Images/Group7.png'%}" />
+        <h4>slot 15</h4>
+      </div>
+    <div class="box spot-booked">
+      <img src="{% static  './Images/Group7.png'%}" />
+      <h4>slot 16</h4>
+    </div>
+    <div class="box spot-booked">
+      <img src="{% static  './Images/Group7.png'%}" />
+      <h4>slot 17</h4>
+    </div>
+    <div class="box spot-booked">
+      <img src="{% static  './Images/Group7.png'%}" />
+      <h4>slot 18</h4>
+    </div>
+    <div class="box spot-occupied">
+      <img src="{% static  './Images/Group7.png'%}" />
+      <h4>slot 19</h4>
+    </div>
+    <div class="box spot-occupied">
+      <img src="{% static  './Images/Group7.png'%}" />
+      <h4>slot 20</h4>
+    </div>
+      <div class="box spot-available">
+        <img src="{% static  './Images/Group7.png'%}" />
+        <h4>slot 21</h4>
+      </div>
+    <div class="box spot-booked">
+      <img src="{% static  './Images/Group7.png'%}" />
+      <h4>slot 22</h4>
+    </div>
+      <div class="box spot-available">
+        <img src="{% static  './Images/Group7.png'%}" />
+        <h4>slot 23</h4>
+      </div>
+      <div class="box spot-available">
+        <img src="{% static  './Images/Group7.png'%}" />
+        <h4>slot 24</h4>
+      </div>
+      <div class="box spot-available">
+        <img src="{% static  './Images/Group7.png'%}" />
+        <h4>slot 25</h4>
+      </div>
+      <div class="box spot-available">
+        <img src="{% static  './Images/Group7.png'%}" />
+        <h4>slot 26</h4>
+      </div>
+    <div class="box spot-booked">
+      <img src="{% static  './Images/Group7.png'%}" />
+      <h4>slot 27</h4>
+    </div>
+    <div class="box spot-occupied">
+      <img src="{% static  './Images/Group7.png'%}" />
+      <h4>slot 28</h4>
+    </div>
+      <div class="box spot-available">
+        <img src="{% static  './Images/Group7.png'%}" />
+        <h4>slot 29</h4>
+      </div>
+      <div class="box spot-available">
+        <img src="{% static  './Images/Group7.png'%}" />
+        <h4>slot 30</h4>
+      </div>
+      <div class="box spot-available">
+        <img src="{% static  './Images/Group7.png'%}" />
+        <h4>slot 31</h4>
+      </div>
+      <div class="box spot-available">
+        <img src="{% static  './Images/Group7.png'%}" />
+        <h4>slot 33</h4>
+      </div>
+      <div class="box spot-available">
+        <img src="{% static  './Images/Group7.png'%}" />
+        <h4>slot 34</h4>
+      </div>
+    <div class="box spot-occupied">
+      <img src="{% static  './Images/Group7.png'%}" />
+      <h4>slot 35</h4>
+    </div>
+    <div class="box spot-occupied">
+      <img src="{% static  './Images/Group7.png'%}" />
+      <h4>slot 36</h4>
+    </div>
+    <div class="box spot-occupied">
+      <img src="{% static  './Images/Group7.png'%}" />
+      <h4>slot 37</h4>
+    </div>
+    <div class="box spot-occupied">
+      <img src="{% static  './Images/Group7.png'%}" />
+      <h4>slot 38</h4>
+    </div>
+    <div class="box spot-occupied">
+      <img src="{% static  './Images/Group7.png'%}" />
+      <h4>slot 39</h4>
+    </div>
+    <div class="box spot-booked">
+      <img src="{% static  './Images/Group7.png'%}" />
+      <h4>slot 40</h4>
+    </div>
+    <div class="box spot-booked">
+      <img src="{% static  './Images/Group7.png'%}" />
+      <h4>slot 41</h4>
+    </div>
+    <div class="box spot-booked">
+      <img src="{% static  './Images/Group7.png'%}" />
+      <h4>slot 42</h4>
+    </div>
+    <div class="box spot-booked">
+      <img src="{% static  './Images/Group7.png'%}" />
+      <h4>slot 43</h4>
+    </div>
+      <div class="box spot-available">
+        <img src="{% static  './Images/Group7.png'%}" />
+        <h4>slot 44</h4>
+      </div>
+      <div class="box spot-available"> 
+        <img src="{% static  './Images/Group7.png'%}" />
+        <h4>slot 45</h4>
+      </div>
+      <div class="box spot-available">
+        <img src="{% static  './Images/Group7.png'%}" />
+        <h4>slot 46</h4>
+      </div>
+      <div class="box spot-available">
+        <img src="{% static  './Images/Group7.png'%}" />
+        <h4>slot 47</h4>
+      </div>
+      <div class="box spot-available">
+        <img src="{% static  './Images/Group7.png'%}" />
+        <h4>slot 48</h4>
+      </div>
+      <div class="box spot-available">
+        <img src="{% static  './Images/Group7.png'%}" />
+        <h4>slot 49</h4>
+      </div>
+     <div class="box spot-booked">
+      <img src="{% static  './Images/Group7.png'%}" />
+      <h4>slot 50</h4>
+    </div>
+    <div class="box spot-booked">
+      <img src="{% static  './Images/Group7.png'%}" />
+      <h4>slot 51</h4>
+    </div>
+
+    <div class="box spot-booked">
+      <img src="{% static  './Images/Group7.png'%}" />
+      <h4>slot 52</h4>
+    </div>
+    <div class="box spot-booked">
+      <img src="{% static  './Images/Group7.png'%}" />
+      <h4>slot 53</h4>
+    </div>
+    <div class="box spot-booked">
+      <img src="{% static  './Images/Group7.png'%}" />
+      <h4>slot 54</h4>
+    </div>
+    <div class="box spot-available">
+      <img src="{% static  './Images/Group7.png'%}" />
+      <h4>slot 55</h4>
+    </div>
+  </div>
+  <div class="booked-model-wrapper">
+    <div class="booked-model">
+      <i class="fa-solid fa-x"></i>
+      <h1>Booked</h1>
+    </div>
+    
+  </div>
+  <div class="login-model-wrapper">
+    <div class="login-model">
+      <h1>Login to get access</h1>
+      <i class="fa-solid fa-x"></i>
+      <a href="{% url 'login'%}">
+        <button>Login</button>
+      </a>
+    </div>
+    </div>
+
+  </div>
+</section>
+</div>
+<script src="{%static 'js/newSpot.js'%}"></script>
+</script>
+<!-- testimonial -->
+<div class="testimonials">
+  <div class="inner">
+      <h1>Testimonials</h1>
+      <!-- <div class="border"> </div> -->
+          <div class="row">
+      
+              <div class="col">
+                  <div class="testimonial">
+                    <div class="box1"> </div>
+                      <img src="{% static  './Images/download.jpg'%}" alt="">
+                      <div class="name">anu gartaula</div>
+                      <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                          <i class="fa-regular fa-star"></i>
+                      </div>
+<p>It is very user-friendly to use and the team associated to this is always there to guide or help in need .parkXpress ensures accurate and real time information about parking spots.</p>
+                  </div>
+              </div>
+              
+
+              <div class="col">
+                  <div class="testimonial">
+                    <div class="box1"></div>
+                      <img src="{% static  './Images/download.jpg'%}" alt="">
+                      <div class="name">Shubheksha Duwadi</div>
+                      <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-regular fa-star"></i>
+                      </div>
+<p> I would like to say about the security they offers for the system is really commendable.Because of parkXpress. I used to feel relieved everytime I parked my vehicle.</p>
+                  </div>
+              </div>
+               <div class="col">
+                  <div class="testimonial">
+                    <div class="box1"></div>
+                      <img src="{% static  './Images/download.jpg'%}" alt="">
+                      <div class="name">Utsha Dangol</div>
+                      <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                      </div>
+<p>I have been using smart parking from last 3 months.It has truly helped me a lot to overcome the unmanaged parking in Nepal.It has truly transfromed my parking experience.</p>
+                  </div>
+              </div>
+          </div>
+  </div>
+</div>
+
+
+     
+    <!-- parkease -->
+    <div class="parkease">
+    <div class="ease">
+      <h1>Park with <span class="E1">ease</span>
+      </h1>
+      <!-- <h3>through Google map</h3> -->
+      <p>Find spots without circling the block for hours,
+        pay using a preferred form of payment,<br/>
+        and add time remotely to their meters
+        before they expire.</p>
+        <div id="cquery">
+       <a href="{% url 'contact'%}" ><button class="contact">Contact for more details  <i class="fa-solid fa-address-book"></i></button></a>
+        <button class="query">Any query? </button>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="choose">
+    <div class="choose-content">
+        <h1>
+           Why to choose <span class="T2">parkXpress?</span>
+          </h1>
+        <p>Traditional parking systems strive to address the
+        necessities of the rapidly evolving world. parkXpress 
+        emerges from this need and aims for innovation, 
+        harnessing the power of technology to address the 
+        complexities of parking challenges.The installed 
+        sensor device will permit the user to know 
+        the occupancy and vacancy of the parking spot</p>
+        <div class="chosebtn">
+       <button class="membership">Get your membership</button>
+       <button class="Seemore">See More</button>
+    </div>
+    </div>
+    <div class="chooseimg">
+        <img src="./Images/women.png" alt="">
+    </div>
+</div> -->
+<!-- footer -->
+   <footer>
+        <div class="footer-content">
+            <div class="row">
+                <div class="footer-col">
+                  <img src="{% static  './Images/logo.svg'%}">
+                    <p>We are dedicated to make
+cities more livable and reducing
+environmental footprint 
+associated with parking.</p>
+                </div> 
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="main.html">Home</a></li>
+                        <li><a href="#about">About us</a></li>
+                        <li><a href="#spot">Find spot</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="">Bookings.html</a></li>
+                        <li><a href="">Testimonial</a></li>
+                    </ul>
+                </div> 
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="">Help center</a></li>
+                        <li><a href="">Terms of service</a></li>
+                        <li><a href="">Legal</a></li>
+                         <li><a href="">Privacy policy</a></li>
+                          <li><a href="">Status</a></li>
+                           <li><a href="">Contact us</a></li>
+                        
+                    </ul>-
+                </div> 
+                <div class="footer-col">
+                    <h4>Stay up to date</h4>
+                    <input type="email" placeholder="Enter your email" class="inputEmail">
+                    <div class="icons">
+                      <a href="#"><i class="bx bxl-facebook-circle" style="color: #0356f0;"></i></a>
+                      <a href="#"><i class="bx bxl-instagram-alt" style="color: #0356f0;"></i></a>
+                      <a href="#"><i class="bx bxl-twitter" style="color: #0356f0;"></i></a>
+                      <a href="#"><i class="bx bxl-youtube"style="color: #0356f0;"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                    <p>Copyright@2023parkXpress@ltd</p>
+                <div class="social">
+                  <ul>
+                     <li><i class="fas fa-map-marker-alt" style="color: #0356f0;"></i> Kathmandu,Nepal</li>
+                    <li> <i class="far fa-envelope" style="color: #0356f0;"></i>  parkXpress@gmail.com</li>
+                  <li>  <i class="fas fa-phone-alt" style="color: #0356f0;"></i> 923823929892</li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+  </body>
+</html>
+
+
