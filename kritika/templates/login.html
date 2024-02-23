@@ -24,13 +24,13 @@
         <i class="fa-regular fa-envelope"></i>
       </div>
 
+
       <div class="email-login">
         <label for="password">Password</label>
         <br />
-        <input type="password" placeholder="Password" id="password" name="pass"><i class="fa-regular fa-eye-slash eye"></i>
+        <input type="password" id="password"  name="password" required/><i class="fa-regular fa-eye-slash eye"></i>
         <i class="fa-regular fa-eye"></i> 
-        <div class="email-login"><span class="forgot"> forgot password?</span></label>    
-      
+       
 
   <div class="button1">
         <button class="login">Login now</button></a>  <br />
@@ -41,45 +41,3 @@
       <script src="{% static 'js/script.js'%}"></script>
   </body>
 </html>
-<!-- {% load static %} 
- <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static  'CSS/login.css'%}">
-    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-    </head>
-   <body>
-    <div class="s1img">
-      <a href="{% url 'index'%}"> <img src="{% static  './Images/logo.svg'%}" alt="" /> </a>
-     </div>
-    <div class="s1" >
-      <form method = "POST"> 
-      {% csrf_token %}
-        <h1>Login to your account</h1>
-        <div class="email-login">
-        <label for="username"> Username </label>
-        <br />
-        <input type="text"placeholder="Enter your name" /> 
-        <i class="fa-regular fa-envelope"></i>
-      </div>
-
-      <div class="email-login">
-        <label for="password">Password</label>
-        <br />
-        <input type="password" placeholder="Enter your password" id="password"/><i class="fa-regular fa-eye-slash eye"></i>
-         <i class="fa-regular fa-eye"></i> 
-        <div class="email-login" >  <span class="forgot"> forgot password?</span></label>    
-      
-
-  <div class="button1">
-        <button class="login">Login now</button></a>  <br />
-        <p>Don’t have an account? <span><a href="{% url 'signup'%}">Sign up</span></a></p>
-      </div>
-      </div>
-      </form>
-  <script src="{% static 'js/script.js'%}"></script>
-  </body>
-</html> -->

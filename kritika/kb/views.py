@@ -1,12 +1,15 @@
 from django.shortcuts import render,redirect
-from django.contrib import messages
-from django.contrib.auth.models import User
 from . models import userinfo
 from django.http import HttpResponse
-from django.contrib.auth import authenticate, login as auth_login
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
+
 
 def index(request):
     return render (request,'index.html')
+def mainpage(request):
+    return render (request,'main.html')
+
 
 def features(request):
     return render(request,'features.html')
@@ -16,9 +19,6 @@ def whytochoose(request):
 
 def client(request):
     return render(request,'client.html')
-
-def new(request):
-    return render(request,'new.html')
 
 def payment(request):
     return render(request,'payment.html')
@@ -37,35 +37,42 @@ def bookingForm(request):
 
 def testimonial(request):
     return render(request,'testimonial.html')
-
-
-# def logout(request):
-#     messages.success(request,"Logout successfully")
-#     return redirect('/')
+def revenue(request):
+    return render(request,'revenue.html')
+def useractivity(request):
+    return render(request,'useractivity.html')
+def vehiclecatagory(request):
+    return render(request,'vehiclecatagory1.html')
 def base(request):
     return render(request,'base.html')
 
 def users(request):
-    userlist= userinfo.objects.all()
+    userlist= User.objects.all()
     return render(request,'users.html',{'userlist':userlist})
 
-def signup(request):
+
+
+@login_required()
+def mainpage(request):
+        return render(request, 'main.html')
+
+def signuppage(request):
     try:
         if request.method == "POST":
             obj = userinfo()
-            obj.name = request.POST.get('name','')
-            print(obj.name)
-            obj.email = request.POST.get('email','')
-            print(obj.email)
-            obj.phone = request.POST.get('phone','')
-            print(obj.phone)
-            obj.username = request.POST.get('username','')
+            obj.username = request.POST.get('username')
             print(obj.username)
-            obj.password = request.POST.get('pass','')
+            obj.number = request.POST.get('number')
+            print(obj.number)
+            obj.email = request.POST.get('email')
+            print(obj.email)
+            obj.password = request.POST.get('pass')
             print(obj.password)
+            obj.confirm_password= request.POST.get('confirm_password')
+            print(obj.confirm_password)
             
             usrlst = userinfo.objects.values_list('username',flat=True)
-          
+            # print(usrlst)
             if obj.username in usrlst:
                 return HttpResponse('Username Already Exist')
             else:
@@ -77,16 +84,33 @@ def signup(request):
         pass       
     return render(request ,'signup.html')
 
-
-def login(request):
+def loginpage(request):
+                           
+   
     if request.method =='POST':
-        username = request.POST.get('username')                             
-        password = request.POST.get('pass')
-        user = authenticate(username=username,password=password)
-        if user is not None:
-            auth_login(request, user)
-            return redirect('index')
+        x = request.POST.get('username')                             
+        y = request.POST.get('password')                          
+        z = userinfo.objects.get(username=x)
+        print(z.password)
+        if y==z.password:
+            return redirect('main')
+            
         else:
-            return render(request,'login.html',{'error':'Invalid username or password'})
-    else:
-        return render(request,'login.html')
+            return HttpResponse('Invalid Password')
+        
+    return render(request ,'login.html')
+
+
+        
+
+
+        
+
+@login_required()
+def new(request):
+    return render(request,'new.html')
+
+
+
+
+    

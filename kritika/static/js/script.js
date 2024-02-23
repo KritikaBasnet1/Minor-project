@@ -1,5 +1,5 @@
 const eye = document.querySelector(".eyetwo");
-const password = document.querySelector("#password");
+const password = document.querySelector("#pass");
 
 console.log(eye);
 
@@ -23,7 +23,7 @@ eye.addEventListener("click", () => {
 });
 
 const eyeone = document.querySelector(".eyeone");
-const cpassword = document.querySelector("#cpassword");
+const cpassword = document.querySelector("#confirm_password");
 
 console.log(eyeone);
 
@@ -33,7 +33,7 @@ eyeone.addEventListener("click", () => {
         cpassword.type = "text"
     }
     else{
-        cpassword.type = "password"
+        confirm_password.type = "password"
     }
     if(eyeone.classList.contains("fa-eye-slash")){
         eyeone.classList.remove("fa-eye-slash")

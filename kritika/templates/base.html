@@ -31,12 +31,12 @@
 </head>
   <body>
     <!-- header -->
-
+<div class="home1" id="home">
       <div class="nav-wrapper">
         <div class="navbar">
           <img src="{% static  './Images/logo.svg'%}" alt="" />
           <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="{% url 'features'%}">Features</a></li>
             <li><a href="#Bookings">Bookings</a></li>
@@ -50,13 +50,10 @@
         </div>
       </div>
       <!-- header-end -->
-      {% for message in messages %}
-      <div class="container">
-        <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
-          <strong>Action :</strong>{{message}}
-        </div>
-      </div>
-        {% endfor %}
+    
+
+<div class="container">
+
 
         {% block body %}
         {% endblock body %}

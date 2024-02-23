@@ -1,0 +1,219 @@
+.sidebar {
+    height: 500%;
+    width: 20%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    
+    background-color: rgb(255, 255, 255);
+    overflow-x: hidden;
+    padding-top: 10px;
+    color: #192342;
+    font: bold , 18;
+    
+  }
+
+  
+  .sidebar a {
+    padding: 20px 20px 20px 40px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #050000;
+    display: block;
+  }
+  .sidebar a:hover {
+    color: #777272;
+  }
+
+
+.profile{
+    display: flex;
+    background-color: #F3F6FF;
+    
+    
+}
+.profile h4{
+  font-size: 30px;
+}
+.profile img{
+    border-radius: 50%;
+    vertical-align: middle;
+    width: 80px;
+    height: 80px;
+}
+.profile i {
+  transform: translateX(-150%);
+ 
+}
+
+
+h2{
+    padding-left:300px ;
+    font: 40;
+    color: #5A5555;
+}
+.logout{
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  
+  
+}
+h3{
+    color: #FF317B;
+    margin: 17px;
+  }
+
+
+.main{
+  justify-content: space-between;
+  
+  margin-left: 300px;
+  padding:  50px;
+  padding-left: 180px;
+  display: flex;
+  margin: 14px;
+  
+  
+}
+
+.user{
+  padding:50px;
+  background-color: #F2E9E9;
+  border-radius:20px ;
+  width:424px;
+  height: 694px;
+ margin-left: 100px;
+
+}
+.user p{
+  font-size: 30px;
+  color:#5A5555;
+}
+.container{
+  
+  padding: 20px;
+  margin: 10px;
+
+  border-bottom: 1px solid #C9CFD5;
+
+
+}
+.details{
+  display: flex;
+  align-items: center;
+  
+}
+.details h3{
+  display: flex;
+  flex-direction: column;
+  margin-right: 150px;
+
+}
+
+
+
+
+
+  
+
+
+.box{
+  background-color: #FFF9F9;
+  border-radius: 20px;
+  width:425px;
+  height: 690px;
+
+}
+.today{
+  display: flex;
+  align-items: center;
+  padding: 1px;
+  margin: 1px;
+  border-bottom: 1px solid #C9CFD5;
+  justify-content: space-evenly;
+}
+.today h4{
+  color: #5A5555;
+  white-space: pre-line;
+  font-size: 15px;
+  
+}
+
+
+ .search {
+ position: relative;
+  padding-left: 35px;
+  margin: 10px;
+  
+    margin-top: -94px;
+
+
+  
+
+  
+}  
+.search i{
+  position: absolute;
+  top: 15px;
+  right: 80px;
+}
+
+.search input[type="text"] {
+
+  display: inline-flex;
+  padding: 15px 50px;
+  align-items: flex-start;
+ 
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: 10px;
+  background: #EED6D6;
+  border-style: none;
+  
+}
+
+.users h3{
+  color: #5A5555;
+  margin-left: 700px;
+  font-size: 40px;
+}
+  
+.progress{
+  color: #5A5555;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  
+}
+progress{
+  width: 100%;
+  margin-top: 10px; 
+  
+}
+
+.progress label{
+  margin-left: 83%;
+
+}
+
+
+.article {
+  display: inline-block;
+ 
+}
+.article h3{
+  color: #777272;
+  margin-left: 115px;
+  font-size: 20px;
+}
+
+
+
+#myChart{
+  height: 450px;
+  width:450px;
+  margin-left: 350px;
+  
+  
+}

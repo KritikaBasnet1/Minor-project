@@ -1,0 +1,137 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{% static  './CSS/revenue.css'%}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://kit.fontawesome.com/ef648c635d.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+
+<body>
+  <div class="sidebar">
+    <div class="icons">
+      <i class="fa-solid fa-bars" style="padding: 30px;"><span style="padding-left: 15px;"></span></i>
+      <i class="fa-regular fa-bell"></i>
+
+    </div>
+
+    <div class="profile">
+      <img src="{% static  './Images/sung-wang-g4DgCF90EM4-unsplash.jpg'%}" style="margin-top: 35px; padding: 5px;">
+      <h4>John Smith<span style="color: #677191; font-size: 16px;">
+          Indonesia, Jakarta</span>
+      </h4>
+
+      <i class="fa-solid fa-gear" style="margin-top: 65px; color: blue;"> </i>
+
+
+    </div>
+
+
+
+
+    <div class="menu">
+      <a href="{% url 'vehiclecatagory1'%}">Vehicle Catagory</a>
+      <a href="{% url 'useractivity'%}">User Activity</a>
+      <a href="{% url 'revenue'%}">Revenue</a>
+      <a href="support">Support</a>
+    </div>
+    <div class="logout">
+      <i class="fa-solid fa-right-from-bracket" style="color: #FF317B;"></i>
+      <h3> Logout</h3>
+    </div>
+  </div>
+
+
+
+  <div class="main">
+    <h3>Revenue</h3>
+    <div class="revenue-container">
+      <div class="revenue">
+        <i class="fa-solid fa-user-tie"></i>
+        <h2>Admin<span>$1160.09</span></h2>
+      </div>
+      <div class="revenue">
+        <i class="fa-solid fa-users"></i>
+        <h2>Provider<span>$1160.09</span></h2>
+      </div>
+      <div class="revenue">
+        <i class="fa-solid fa-sack-dollar"></i>
+        <h2>Total Profit<span>$1160.09</span></h2>
+      </div>
+      <div class="revenue">
+        <i class="fa-solid fa-money-bill"></i>
+        <h2>Today's Profit<span>$1160.09</span></h2>
+      </div>
+    </div>
+
+
+
+
+  </div>
+  <div class="booking">
+    <!-- <h3>Total revenue</h3>
+
+  <img src="Frame 231.png" alt=""> -->
+
+    <div>
+      <canvas id="chart"></canvas>
+    </div>
+
+
+    <script>
+      var canvas = document.getElementById('chart');
+      new Chart(canvas, {
+        type: 'line',
+        data: {
+          labels: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
+          datasets: [{
+            label: '2023',
+            yAxisID: 'A',
+            data: [10, 20, 25, 20, 30, 35, 45, 50, 30, 35, 45, 49]
+          }, {
+            label: '2024',
+            yAxisID: 'B',
+            data: [20, 10, 25, 30, 30, 50, 42, 30, 35, 50, 45, 49]
+          }]
+        },
+        options: {
+          scales: {
+            y: [{
+              id: 'A',
+              type: 'linear',
+              position: 'left',
+            },
+            {
+              id: 'B',
+              type: 'linear',
+              position: 'right',
+              ticks: {
+                max: 1,
+                min: 0
+              }
+            }]
+          },
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'right',
+            },
+            title: {
+              display: true,
+              text: 'Total Revenue'
+            }
+          }
+        }
+      });
+    </script>
+  </div>
+
+  </div>
+</body>
